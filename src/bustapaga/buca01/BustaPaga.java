@@ -1,16 +1,16 @@
 package bustapaga.buca01;
 
 public class BustaPaga {
-    private final double stip;
+    private final double stipendio;
 
-    public BustaPaga(final double stpnd) {
-        this.stip = stpnd;
+    public BustaPaga(final double stipendio) {
+        this.stipendio = stipendio;
     }
 
     public double getNetto() {
-        final double pst = Math.max(Math.min(stip, 20000.0) - 5000, 0.0);
-        final double sst = Math.max(Math.min(stip, 40000) - 20000, 0.0);
-        final double tst = Math.max(stip - 40000, 0.0);
-        return stip - (pst * 0.1 + sst * 0.2 + tst * 0.4);
+        final double primoStipendio = Math.max(Math.min(stipendio, 20000.0) - 5000, 0.0);
+        final double secondoStipendio = Math.max(Math.min(stipendio, 40000) - 20000, 0.0);
+        final double terzoStipendio = Math.max(stipendio - 40000, 0.0);
+        return stipendio - (primoStipendio * 0.1 + secondoStipendio * 0.2 + terzoStipendio * 0.4);
     }
 }
