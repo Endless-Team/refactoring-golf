@@ -3,8 +3,8 @@ package bustapaga.buca01;
 public class BustaPaga {
     private final double stipendio;
 
-    public BustaPaga(final double stpnd) {
-        this.stipendio = stpnd;
+    public BustaPaga(final double stipendio) {
+        this.stipendio = stipendio;
     }
 
     public double getNetto() {
